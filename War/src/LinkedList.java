@@ -1,5 +1,4 @@
 import java.util.AbstractList;
-import java.util.Collections;
 
 
 public class LinkedList<T> extends AbstractList<T> {
@@ -92,11 +91,10 @@ public class LinkedList<T> extends AbstractList<T> {
 			return temp.info;
 		}
 		
-		@Override
+		int size = 0;
 		public int size() 
 		{
 			Node curr = head;
-			int size = 0;
 			while(curr != null)
 			{
 				size++;
@@ -120,93 +118,21 @@ public class LinkedList<T> extends AbstractList<T> {
 			return output.substring(0,output.length()-2) +"]";
 		}
 		
+		
+		
+		
 		public static void main(String[] args) 
 		{
-			LinkedList<String> myList = new LinkedList<String>();
-			//aces
-			myList.add("Ace of Clubs");
-			myList.add("Ace of Diamonds");
-			myList.add("Ace of Hearts");
-			myList.add("Ace of Spades");
 			
-			//2s
-			myList.add("2 of Clubs");
-			myList.add("2 of Diamonds");
-			myList.add("2 of Hearts");
-			myList.add("2 of Spades");
 			
-			//3s
-			myList.add("3 of Clubs");
-			myList.add("3 of Diamonds");
-			myList.add("3 of Hearts");
-			myList.add("3 of Spades");
+	
 			
-			//4s
-			myList.add("4 of Clubs");
-			myList.add("4 of Diamonds");
-			myList.add("4 of Hearts");
-			myList.add("4 of Spades");
-			
-			//5s
-			myList.add("5 of Clubs");
-			myList.add("5 of Diamonds");
-			myList.add("5 of Hearts");
-			myList.add("5 of Spades");
-			
-			//6s
-			myList.add("6 of Clubs");
-			myList.add("6 of Diamonds");
-			myList.add("6 of Hearts");
-			myList.add("6 of Spades");
-			
-			//7s
-			myList.add("7 of Clubs");
-			myList.add("7 of Diamonds");
-			myList.add("7 of Hearts");
-			myList.add("7 of Spades");
-			
-			//8s
-			myList.add("8 of Clubs");
-			myList.add("8 of Diamonds");
-			myList.add("8 of Hearts");
-			myList.add("8 of Spades");
-			
-			//9s
-			myList.add("9 of Clubs");
-			myList.add("9 of Diamonds");
-			myList.add("9 of Hearts");
-			myList.add("9 of Spades");
-			
-			//10s
-			myList.add("10 of Clubs");
-			myList.add("10 of Diamonds");
-			myList.add("10 of Hearts");
-			myList.add("10 of Spades");
-			
-			//Jacks
-			myList.add("Jack of Clubs");
-			myList.add("Jack of Diamonds");
-			myList.add("Jack of Hearts");
-			myList.add("Jack of Spades");
-			
-			//Queens
-			myList.add("Queen of Clubs");
-			myList.add("Queen of Diamonds");
-			myList.add("Queen of Hearts");
-			myList.add("Queen of Spades");
-			
-			//Kings
-			myList.add("King of Clubs");
-			myList.add("King of Diamonds");
-			myList.add("King of Hearts");
-			myList.add("King of Spades");
 		
-				
+			
+			
+		//take random elements and bring them to the second deck
+			
 		
-			Collections.shuffle(myList);
-	        System.out.println("Results after shuffle operation:");
-	        System.out.println(myList);
-    
 
 		}
 }

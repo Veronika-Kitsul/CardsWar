@@ -20,11 +20,13 @@ public class War {
 		//shuffling -- it's not really random or i did sth wrong (i suppose it's two ...)
 		for (int i = 0; i < 26; i++)
 		{
-			int random = (int)Math.random() + cards.size + 1;
+			int random = (int)Math.random() * cards.size +1;
 			deck.add(cards.get(random));
 			cards.remove(random);
 		}	
 	    System.out.println(deck);
+	    
+	    
 		/*while (deck == null || cards == null)
 		{
 			System.out.println("Player 1 has " + cards.size + "cards. Player 2 has " + deck.size + "cards");
@@ -34,8 +36,6 @@ public class War {
 			System.out.println("Player 1 plays " + cards.get(0));
 			System.out.println("Player 2 plays " + deck.get(0));
 			
-			
-			//when i try to get the first card with get element, i have a mistake
 			
 			
 			/*if (cards.get(0) > deck.get(0))

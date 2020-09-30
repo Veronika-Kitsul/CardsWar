@@ -27,7 +27,7 @@ public class War {
 	    System.out.println(deck);
 	    
 	    
-		/*while (deck == null || cards == null)
+		while (deck == null || cards == null)
 		{
 			System.out.println("Player 1 has " + cards.size + "cards. Player 2 has " + deck.size + "cards");
 			
@@ -38,18 +38,24 @@ public class War {
 			
 			
 			
-			/*if (cards.get(0) > deck.get(0))
+			if (cards.get(0) > deck.get(0))
 			{
-				add those two cards to the back of cards
-				delete it from first places
+				cards.add(cards.size, cards.get(0));
+				cards.add(cards.size, deck.get(0));
+				deck.remove(0);
+				cards.remove(0);
 				System.out.println("Player 1 wins the round!");
 			}
-			else if (first card num < first card from deck num)
+			else if (cards.get(0) < deck.get(0))
 			{
-				add those two cards to the back of deck
-				delete it from first places
+				
+			}
+				deck.add(cards.size, cards.get(0));
+				deck.add(cards.size, deck.get(0));
+				deck.remove(0);
+				cards.remove(0);
 				System.out.println("Player 2 wins the round!");
-			}*/
+			}
 		}
 		
 		

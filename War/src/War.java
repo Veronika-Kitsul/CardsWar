@@ -22,13 +22,10 @@ public class War {
 		//the problem is that if you try to test this deck for player 2, it gives same card several times
 		for (int i = 0; i < 26; i++)
 		{
-			int random = (int)Math.random() + cards.size + 1;
-			if (random / 2 == 0)
-			{
-				deck.add(cards.get(random));
-				System.out.println(cards.get(random));
-				cards.remove(random);
-			}
+			int random = (int)Math.random() * cards.size + 1;
+			deck.add(cards.get(random));
+			System.out.println(cards.get(random));
+			cards.remove(random);
 		}	
 	    
 		while (deck == null || cards == null)

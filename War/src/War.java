@@ -37,8 +37,7 @@ public class War {
 			System.out.println("Player 2 plays " + deck.get(0));
 			
 			
-			
-			if (cards.get(0) > deck.get(0))
+			if (cards.get(0).num > deck.get(0).num )
 			{
 				cards.add(cards.size, cards.get(0));
 				cards.add(cards.size, deck.get(0));
@@ -46,7 +45,7 @@ public class War {
 				cards.remove(0);
 				System.out.println("Player 1 wins the round!");
 			}
-			else if (cards.get(0) < deck.get(0))
+			else if (cards.get(0).num < deck.get(0).num)
 			{
 				
 			}

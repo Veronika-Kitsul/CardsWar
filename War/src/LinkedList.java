@@ -70,7 +70,6 @@ public class LinkedList<T> extends AbstractList<T> {
 				curr = curr.next;
 			}
 			
-			System.out.println(curr.info);
 			return curr.info;
 		}
 		

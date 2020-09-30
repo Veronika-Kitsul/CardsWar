@@ -1,4 +1,3 @@
-import java.util.concurrent.ThreadLocalRandom;
 
 public class War {
 
@@ -19,16 +18,14 @@ public class War {
 		LinkedList<Cards> deck = new LinkedList<Cards>();
 		
 		//shuffling -- it's not really random or i did sth wrong (i suppose it's two ...)
-		//the problem is that if you try to test this deck for player 2, it gives same card several times
 		for (int i = 0; i < 26; i++)
 		{
-			int random = (int)Math.random() * cards.size + 1;
+			int random = (int)Math.random() + cards.size + 1;
 			deck.add(cards.get(random));
-			System.out.println(deck.get(random));
 			cards.remove(random);
 		}	
-	    
-		while (deck == null || cards == null)
+	    System.out.println(deck);
+		/*while (deck == null || cards == null)
 		{
 			System.out.println("Player 1 has " + cards.size + "cards. Player 2 has " + deck.size + "cards");
 			
@@ -38,9 +35,7 @@ public class War {
 			System.out.println("Player 2 plays " + deck.get(0));
 			
 			
-			
-			
-			// so for this all i need in fact is to access the first card, and i hope i will be good here
+			//when i try to get the first card with get element, i have a mistake
 			
 			
 			/*if (cards.get(0) > deck.get(0))
@@ -59,7 +54,7 @@ public class War {
 		
 		
 		//winning message if someone wins
-	}
+	
 	
 	
 	public static void main(String[] args) {

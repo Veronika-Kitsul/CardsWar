@@ -7,7 +7,7 @@ public class War {
 		
 		
 		//add elements to the deck of cards - works well
-		for (int i = 1; i <= 12; i++)
+		for (int i = 1; i <= 13; i++)
 		{
 			cards.add(new Cards(0+i, "of Clubs" ));
 			cards.add(new Cards(0+i, "of Diamonds"));

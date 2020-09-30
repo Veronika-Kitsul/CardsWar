@@ -7,8 +7,8 @@ public class LinkedList<T> extends AbstractList<T> {
 	
 	private class Node
 	{
-		private Node next;
-		private T info;
+		public Node next;
+		public T info;
 
 		public Node(T info)
 		{

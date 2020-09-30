@@ -1,7 +1,8 @@
 
 public class War {
 
-	public War() {
+	public War() 
+	{
 		LinkedList<Cards> cards = new LinkedList<Cards>();
 		
 		
@@ -13,14 +14,13 @@ public class War {
 			cards.add(new Cards(0+i, "of Hearts" ));
 			cards.add(new Cards(0+i, "of Spades" ));
 		}
-		System.out.println(cards.size);
 		
 		LinkedList<Cards> deck = new LinkedList<Cards>();
 		
-		//shuffling -- so now i know that size here returns zero always
+		//shuffling -- so now i know that size here returns zero always and i don't know why is that
 		for (int i = 0; i < 26; i++)
 		{
-			int random = (int)Math.random() + cards.size + 1;
+			int random = (int)Math.random() + (52 - i) + 1;
 			deck.add(cards.get(random));
 			cards.remove(random);
 		}	
@@ -49,28 +49,33 @@ public class War {
 			}
 			else if (cards.get(0).num < deck.get(0).num)
 			{
-				
-			}
 				deck.add(cards.size, cards.get(0));
 				deck.add(cards.size, deck.get(0));
 				deck.remove(0);
 				cards.remove(0);
 				System.out.println("Player 2 wins the round!");
-			}
-		    if (cards.get(0).num == deck.get(0).num)
-		    {
+			}	
+			else
 		    	System.out.println("This is a tie! ");
 		    	deck.remove(0);
 				cards.remove(0);
 		    }
 		}
 		
-		
-		//winning message if someone wins
+	
+		/*if (deck == null)
+		{
+			System.out.println("Player 1 won the game!");
+		}
+		if (cards == null)
+		{
+			System.out.println("Player 2 won the game!");
+		}*/
 	
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		new War();
 		
 		

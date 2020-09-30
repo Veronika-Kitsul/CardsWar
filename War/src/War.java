@@ -24,7 +24,7 @@ public class War {
 		{
 			int random = (int)Math.random() * cards.size + 1;
 			deck.add(cards.get(random));
-			System.out.println(cards.get(random));
+			System.out.println(deck.get(random));
 			cards.remove(random);
 		}	
 	    
@@ -43,7 +43,7 @@ public class War {
 			// so for this all i need in fact is to access the first card, and i hope i will be good here
 			
 			
-			/*if (first card num > first card from deck num)
+			/*if (cards.get(0) > deck.get(0))
 			{
 				add those two cards to the back of cards
 				delete it from first places

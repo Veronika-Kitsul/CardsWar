@@ -46,7 +46,12 @@ public class LinkedList<T> extends AbstractList<T> {
 		public void add(int index, T info) 
 		{
 			Node curr = head; 
-			for (int i = 0; i < index; i++)
+			if (index == 0) {
+				head = new Node(info);
+				head.next = curr;
+			}
+			
+			for (int i = 0; i < index-1; i++)
 			{
 				curr = curr.next;
 			}
@@ -74,9 +79,15 @@ public class LinkedList<T> extends AbstractList<T> {
 		}
 		
 		
-		public T remove (int index) 
+		public  T remove (int index) 
 		{
 			Node curr = head;
+			if (index == 0)
+			{
+				head = curr.next;
+				return curr.info;
+				
+			}
 			
 			// index must be within our list
 			for (int i = 0; i < index-1; i++) 
@@ -87,13 +98,16 @@ public class LinkedList<T> extends AbstractList<T> {
 			Node temp = curr.next;
 			curr.next = curr.next.next;
 			
-			return temp.info;
+			return curr.info;
+		
 		}
 		
-		int size = 0;
+		
 		public int size() 
 		{
 			Node curr = head;
+			int size = 0;
+			
 			while(curr != null)
 			{
 				size++;
@@ -125,11 +139,14 @@ public class LinkedList<T> extends AbstractList<T> {
 			
 			
 	
-			
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		list.add(7);
+		list.add(6);
+		list.add(3);
+		list.add(1,2);
+		list.remove(0);
+		System.out.println(list);
 		
-			
-			
-		//take random elements and bring them to the second deck
 			
 		
 

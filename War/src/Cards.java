@@ -3,7 +3,7 @@ public class Cards
 {
 		public int num;
 		public String suit;
-		private Cards next;
+		public Cards next;
 
 		public Cards(int num, String suit)
 		{
